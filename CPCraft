@@ -1,0 +1,17 @@
+i = 1
+while i == 1 do
+  if read() == "stop" then
+    i = 0
+  end
+  if redstone.getInput("back") then
+    local monitor = peripheral.wrap("right")
+    monitor.clear()
+    monitor.setCursorPos(1,1)
+    monitor.write("Door Opened!!!")
+  else 
+    local monitor = peripheral.wrap("right")
+    monitor.clear()
+    monitor.setCursorPos(1,1)
+    monitor.write("Door Closed")
+  end
+end
